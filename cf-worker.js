@@ -20,7 +20,7 @@ async function handleRequest(request) {
         })
 
     } else if (new URL(request.url).pathname == "/" && !request.body ) {
-        return Response.redirect("https://github.com/cachecleanerjeet/Contact-form", 301)
+        return Response.redirect("https://theshashankk.github.io", 301)
     } else {
         
         const body = await request.json()
@@ -41,7 +41,7 @@ async function handleRequest(request) {
                         "Content-Type": "application/json",
                         "Cache-Control": "no-cache, no-store, must-revalidate",
                         "Access-Control-Allow-Origin": "*",
-                        "Made-By": "https://github.com/cachecleanerjeet"
+                        "Made-By": "t.me/Albertr_xD"
                     })
                 })
 
@@ -50,7 +50,7 @@ async function handleRequest(request) {
             const sendmessage = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
                 body: JSON.stringify({
                     chat_id: CHATID,
-                    text: `<b>New Contact Request Recieved</b>\n\n<b>IP: </b><code>${request.headers.get("cf-connecting-ip")}</code>\n<b>Name: </b><code>${name}</code>\n<b>Phone No: </b>${phone_no}\n<b>Email: </b>${email}\n<b>Subject: </b><code>${subject}</code>\n<b>Message: </b><code>${message}</code>`,
+                    text: `<b>Hey I Have Got New Message For you</b>\n\n<b>IP: </b><code>${request.headers.get("cf-connecting-ip")}</code>\n<b>Name: </b><code>${name}</code>\n<b>Phone No: </b>${phone_no}\n<b>Email: </b>${email}\n<b>Subject: </b><code>${subject}</code>\n<b>Message: </b><code>${message}</code>`,
                     parse_mode: 'HTML'
                 }),
                 method: "POST",
@@ -76,7 +76,7 @@ async function handleRequest(request) {
                     "Content-Type": "application/json",
                     "Cache-Control": "no-cache, no-store, must-revalidate",
                     "Access-Control-Allow-Origin": "*",
-                    "Made-By": "https://github.com/cachecleanerjeet"
+                    "Made-By": "t.me/Albertt_xD"
                 })
             })
         }
